@@ -1,0 +1,17 @@
+.headerClass {
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    padding: 10px;
+}    
+    
+#titulo{
+    color:white;
+    margin-left:10px;    
+}
+footer {
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
