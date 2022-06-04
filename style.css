@@ -15,3 +15,12 @@ footer {
     color: white;
     text-align: center;
 }
+h3 {
+    text-align: center;
+}
+.ingresos {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: beige;
+}

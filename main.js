@@ -1,33 +1,27 @@
-/* Definición de Variables */
-let turno=parseInt(prompt("Por favor ingrese su permanencia en hs: 4, 8 , 12 o 24"));
-let valor=100;
-let monto=turno*valor;
 
-/* Muestra del cálculo del monto de la estadía */
+let boton = document.getElementById("btnPrincipal");
+boton.addEventListener("click", escribirNombre);
 
-let parrafo = document.createElement("div");
-parrafo.innerHTML = "El monto que usted abonará en su permanencia de "+turno+" horas "+", será de $ "+monto;
-document.body.appendChild(parrafo); 
-
-
-let estacionamiento = document.getElementById("autosNuevos");
-estacionamiento.appendChild(parrafo); 
-
-/* Ingreso de auto nuevo y definición de array */
-
-const baseDeautos=[];
-let marca= prompt ("Ingese la marca de su vehículo");
-let modelo=prompt("Ingrese el modelo del mismo");
-const nuevaBase=baseDeautos.concat(marca)+" "+baseDeautos.concat(modelo);
-
-let autos = document.getElementById("estacionamiento");
-let li = document.createElement("li");
-li.innerHTML =nuevaBase;
-autos.appendChild(li);
-
-
-
-
-
-
-
+function escribirNombre() {
+    let nombre = document.getElementById("nombre").value;
+    var contenido = "El vehículo ingresado es: <strong>" + nombre + "</strong></p>";
+    document.getElementById("resultado").innerHTML = contenido;
+}
+boton.addEventListener("click", escribirPatente);
+function escribirPatente () {
+    let patente= document.getElementById("patente").value;
+    var contenido2 = "La patente ingresada es: <strong>" + patente + "</strong></p>";
+    document.getElementById("resultado2").innerHTML = contenido2;
+}
+boton.addEventListener("click", escribirTurno);
+function escribirTurno () {
+    let turno= document.getElementById("turnos").value;
+    var contenido3 = "La estadía será por: <strong>" + turno + "</strong></p>";
+    document.getElementById("resultado3").innerHTML = contenido3;
+}
+boton.addEventListener("click", escribirPropietario);
+function escribirPropietario () {
+    let propietario= document.getElementById("propietario").value;
+    var contenido4 = "El propietario del vehículo es: <strong>" + propietario + "</strong></p>";
+    document.getElementById("resultado4").innerHTML = contenido4;
+}
